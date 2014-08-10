@@ -30,28 +30,27 @@ void suppressAll()                                // Forhindre NULL resultat i a
 
 void servo_left()
 {
-  // servoMain.write(90);  // Turn Servo back to center position (90 degrees)
-   //delay(2000);          // Wait 1 second
-   servoMain.write(170);  // Turn Servo Left to 45 degrees
-   delay(2000);          // Wait 1 second
-   servoMain.write(90);  // Turn Servo back to center position (90 degrees)
-   delay(1000);          // Wait 1 second
+  // servoMain.write(90);  
+  // delay(2000);          
+   servoMain.write(170);
+   delay(2000);         
+   servoMain.write(90); 
+   delay(1000);    
 }
 
 void servo_right()
 {
- //  servoMain.write(90);  // Turn Servo back to center position (90 degrees)
-   //delay(2000);          // Wait 1 second
-   servoMain.write(18);  // Turn Servo Left to 45 degrees
-   delay(2000);          // Wait 1 second
-   servoMain.write(90);  // Turn Servo back to center position (90 degrees)
-   delay(1000);          // Wait 1 second
+ //  servoMain.write(90);
+   //delay(2000);     
+   servoMain.write(18); 
+   delay(2000);      
+   servoMain.write(90);  
+   delay(1000);  
 }
 
 
 void loop()
 {
-  Serial.println("Kernels LOADED");
   int val;
   mySerial.print("!RW");
   mySerial.write(byte(RFID_READ));
